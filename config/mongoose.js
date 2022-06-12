@@ -1,16 +1,15 @@
-const mongoose= require('mongoose')
+const mongoose = require('mongoose')
 
 mongoose.connect(process.env.MONGODB_URI_SHORTEN, { useNewUrlParser: true, useUnifiedTopology: true })
 
-const db= mongoose.connection
+const db = mongoose.connection
 
-db.on('error',()=>{
+db.on('error', () => {
   console.log('url_shortener mongoDB error')
 })
 
-db.once('open',()=>{
+db.once('open', () => {
   console.log('url-shortener mongoDB connected!')
 })
 
-module.exports=db
-
+module.exports = db

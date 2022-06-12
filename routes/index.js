@@ -1,10 +1,10 @@
-const express=require('express')
-const router=express.Router()
+const express = require('express')
+const router = express.Router()
 
-const home=require('./modules/home')
-// const url_shorten=require('./modules/url_shorten')
+const home = require('./modules/home')
 
-router.use('/',home)
-// router.use('/url_shorten',url_shorten)
 
-module.exports=router
+router.use('/', home)
+
+
+module.exports = router
