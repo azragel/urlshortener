@@ -1,0 +1,28 @@
+
+{{!-- URL INPUT --}}
+<form action="/" method="POST">
+
+  <input class="w-50" style="vertical-align: middle;" type="url" placeholder="INPUT URL HERE" name="url"
+    value="{{url}}" required>
+  <button type="submit" class="btn">
+    <i class="fas fa-exchange-alt"></i>
+
+  </button>
+
+</form>
+
+
+{{!-- Shorten URL OUTPUT --}}
+<input class="w-50" id="shortenURL" style="vertical-align: middle;" type="url" name="url" value="{{host}}/{{shorten_url}}">
+<button  id="copyButton" onclick="urlCopy()" class="btn">
+  <i class="far fa-copy"></i>
+</button>
+
+<script>
+  function urlCopy() {
+    const shortenURL = document.getElementById("shortenURL").value
+    navigator.clipboard.writeText(shortenURL)
+      .then(() => alert("URL Copied!"))
+      .catch(error => console.log(error))
+  }
+</script>
