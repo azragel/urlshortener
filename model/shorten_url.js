@@ -1,3 +1,4 @@
+// MONGODB資料樣板
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const shorturlSchema = new Schema({

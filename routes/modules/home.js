@@ -1,13 +1,15 @@
+// 載入框架套件
 const express = require('express')
 const router = express.Router()
 const shortenURL = require('../../model/shorten_url')
 const randomChar = require('../../fuction/randomChar')
 
+// 首頁
 router.get('/', (req, res) => {
   res.render('index')
 })
 
-// 轉短網址
+// 原網址轉短網址
 router.post('/', (req, res) => {
   const url = req.body.url
   const digit = 5

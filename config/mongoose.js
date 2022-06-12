@@ -1,5 +1,7 @@
+// 載入MONGOOSE模組操作MONGODB
 const mongoose = require('mongoose')
 
+// 與MONGODB連線
 mongoose.connect(process.env.MONGODB_URI_SHORTEN, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const db = mongoose.connection

@@ -1,6 +1,8 @@
+// 載入框架套件
 const express = require('express')
 const router = express.Router()
 
+// 載入路由模組
 const home = require('./modules/home')
 
 
